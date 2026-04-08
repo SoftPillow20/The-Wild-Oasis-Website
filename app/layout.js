@@ -1,5 +1,5 @@
 import "@/app/_styles/globals.css";
-import Header from "@/starter/components/Header";
+import Header from "@/app/_components/Header";
 
 import { ReservationProvider } from "./_components/ReservationContext";
 
