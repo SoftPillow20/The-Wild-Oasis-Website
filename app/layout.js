@@ -25,9 +25,9 @@ export default async function RootLayout({ children }) {
   const session = await auth(); //This makes this component dynamic; Consequently, this makes all the pages navigated / coming from this component, dynamic.
 
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col`}
+        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col relative overflow-x-hidden`}
       >
         <AuthProvider session={session}>
           <Header />
