@@ -7,8 +7,8 @@ function Cabin({ cabin }) {
     cabin;
 
   return (
-    <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
-      <div className="relative scale-[1.15] -translate-x-3">
+    <div className="grid grid-rows-[3fr_4fr] md:grid-rows-1 md:grid-cols-[3fr_4fr] gap-0 md:gap-20 border border-primary-800 py-3 px-10 mb-24">
+      <div className="relative scale-[1.15] md:-translate-x-3">
         <Image
           fill
           loading="eager"
@@ -20,11 +20,11 @@ function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-7xl mb-5 -translate-x-63.5 bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-accent-100 font-black text-[56px] sm:text-7xl mb-5 -translate-y-63.5 md:translate-y-0 md:-translate-x-63.5 bg-primary-950 p-6 pb-1 w-[150%]">
           Cabin {name}
         </h3>
 
-        <p className="text-lg text-primary-300 mb-10">
+        <p className="text-lg text-justify md:text-left text-primary-300 mb-10">
           <TextExpander>{description}</TextExpander>
         </p>
 
