@@ -51,32 +51,32 @@ export default function Navigation({ isMenuOpen, setIsMenuOpen }) {
   return (
     <nav
       id="navigation"
-      className="z-999 text-xl absolute right-0 left-[50%] top-0 bottom-0 backdrop-blur-lg pt-25 md:relative md:pt-0 md:left-0 md:backdrop-blur-none"
+      className="z-999 text-xl absolute right-0 left-[50%] top-0 bottom-0 backdrop-blur-lg pt-25 md:relative md:left-0 md:backdrop-blur-none p-10 md:p-0"
     >
-      <ul className="flex gap-16 items-center flex-col md:flex-row">
-        <li>
+      <ul className="flex gap-12 md:gap-16 items-center flex-col md:flex-row">
+        <li className="w-full md:w-auto py-2 md:py-0">
           <Link
             href="/cabins"
-            className="hover:text-accent-400 transition-colors"
+            className="hover:text-accent-400 md:text-xl text-lg transition-colors flex justify-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Cabins
           </Link>
         </li>
-        <li>
+        <li className="w-full md:w-auto py-2 md:py-0">
           <Link
             href="/about"
-            className="hover:text-accent-400 transition-colors"
+            className="hover:text-accent-400 md:text-xl text-lg transition-colors flex justify-center"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
         </li>
-        <li>
+        <li className="w-full md:w-auto py-2 md:py-0">
           {session?.user.image ? (
             <Link
               href="/account"
-              className="hover:text-accent-400 transition-colors flex items-center gap-4"
+              className="hover:text-accent-400 transition-colors md:text-xl text-lg flex items-center justify-center flex-col md:flex-row gap-4"
               onClick={() => setIsMenuOpen(false)}
             >
               <img

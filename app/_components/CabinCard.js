@@ -6,8 +6,8 @@ function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
-    <div className="flex border-primary-800 border">
-      <div className="relative flex-1">
+    <div className="flex flex-col md:flex-row border-primary-800 border">
+      <div className="relative flex-1 aspect-square">
         <Image
           src={image}
           alt={`Cabin ${name}`}
@@ -19,12 +19,12 @@ function CabinCard({ cabin }) {
       </div>
 
       <div className="grow">
-        <div className="pt-5 pb-4 px-7 bg-primary-950">
-          <h3 className="text-accent-500 font-semibold text-2xl mb-3">
+        <div className="md:pt-5 pt-8 pb-4 px-7 bg-primary-950">
+          <h3 className="text-accent-500 font-semibold text-3xl md:text-2xl mb-3">
             Cabin {name}
           </h3>
 
-          <div className="flex gap-3 items-center mb-2">
+          <div className="flex gap-3 items-center mb-10 md:mb-2">
             <UsersIcon className="h-5 w-5 text-primary-600" />
             <p className="text-lg text-primary-200">
               For up to <span className="font-bold">{maxCapacity}</span> guests

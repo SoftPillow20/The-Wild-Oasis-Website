@@ -3,7 +3,7 @@
 import Navigation from "@/app/_components/Navigation";
 import Image from "next/image";
 import Logo from "@/app/_components/Logo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import menuLogo from "@/public/menu.png";
 import xmarkLogo from "@/public/xmark.png";
@@ -12,6 +12,19 @@ import gsap from "gsap";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    function closeMenu(e) {
+      const body = e.target.className.split(" ").at(0);
+
+      if (body === "navLogo") return;
+      else setIsMenuOpen(false);
+    }
+
+    if (isMenuOpen) document.body.addEventListener("click", closeMenu);
+
+    return () => document.body.removeEventListener("click", closeMenu);
+  }, [isMenuOpen]);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -39,7 +52,7 @@ function Header() {
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           <Image
-            className="navLogo w-10 h-auto"
+            className="navLogo w-8 md:w-10 h-auto"
             src={isMenuOpen ? xmarkLogo : menuLogo}
             alt="menu icon"
           />
