@@ -16,28 +16,28 @@ export default async function Page() {
   if (!cabins.length) return null;
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid md:grid-cols-5 gap-x-24 gap-y-16 md:gap-y-32 text-lg items-center">
       <div className="col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
         </h1>
 
         <div className="space-y-8">
-          <p>
+          <p className="text-justify md:text-left">
             Where nature&apos;s beauty and comfortable living blend seamlessly.
             Hidden away in the heart of the Italian Dolomites, this is your
             paradise away from home. But it&apos;s not just about the luxury
             cabins. It&apos;s about the experience of reconnecting with nature
             and enjoying simple pleasures with family.
           </p>
-          <p>
+          <p className="text-justify md:text-left">
             Our {cabins.length + " "} luxury cabins provide a cozy base, but the
             real freedom and peace you&apos;ll find in the surrounding
             mountains. Wander through lush forests, breathe in the fresh air,
             and watch the stars twinkle above from the warmth of a campfire or
             your hot tub.
           </p>
-          <p>
+          <p className="text-justify md:text-left">
             This is where memorable moments are made, surrounded by
             nature&apos;s splendor. It&apos;s a place to slow down, relax, and
             feel the joy of being together in a beautiful setting.
@@ -45,7 +45,7 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-3 row-1 md:row-2 md:col-span-2">
         <Image
           src={about1}
           placeholder="blur"
@@ -54,7 +54,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="relative aspect-square col-span-2">
+      <div className="relative aspect-square col-span-3 md:col-span-2">
         <Image
           src="/about-2.jpg"
           fill
@@ -70,13 +70,13 @@ export default async function Page() {
         </h1>
 
         <div className="space-y-8">
-          <p>
+          <p className="text-justify md:text-left">
             Since 1962, The Wild Oasis has been a cherished family-run retreat.
             Started by our grandparents, this haven has been nurtured with love
             and care, passing down through our family as a testament to our
             dedication to creating a warm, welcoming environment.
           </p>
-          <p>
+          <p className="text-justify md:text-left">
             Over the years, we&apos;ve maintained the essence of The Wild Oasis,
             blending the timeless beauty of the mountains with the personal
             touch only a family business can offer. Here, you&apos;re not just a
