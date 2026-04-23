@@ -6,6 +6,10 @@ import { ReservationProvider } from "./_components/ReservationContext";
 import { Josefin_Sans } from "next/font/google";
 import { auth } from "./_lib/auth";
 import { AuthProvider } from "./_components/authContext";
+import gsap from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],

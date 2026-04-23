@@ -29,6 +29,13 @@
   --color-accent-950: #382814;
 }
 
+@utility text-gradient {
+  background: linear-gradient(120deg, #faf5f0, #e8d6bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @layer components {
   .spinner {
     margin: 3.2rem auto 1.6rem;
