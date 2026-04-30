@@ -10,33 +10,43 @@ import gsap from "gsap";
 
 function Page() {
   useGSAP(() => {
+    const heroTl = gsap.timeline();
     const titleSplit = new SplitText(".title", { type: "chars" });
 
     titleSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
-    gsap.fromTo(
-      titleSplit.chars,
-      {
-        opacity: 0,
-        xPercent: 25,
-        duration: 0.5,
-        ease: "power1.out",
-        stagger: 0.5,
-      },
-      {
-        opacity: 1,
-        xPercent: 0,
-        duration: 1,
-        ease: "power1.out",
-        stagger: 0.05,
-      },
-    );
-
-    gsap.to(".button", {
-      opacity: 1,
-      duration: 0.5,
-      ease: "power1.inOut",
-    });
+    heroTl
+      .fromTo(
+        titleSplit.chars,
+        {
+          opacity: 0,
+          xPercent: 25,
+          duration: 0.5,
+          ease: "power1.out",
+          stagger: 0.5,
+        },
+        {
+          opacity: 1,
+          xPercent: 0,
+          duration: 1,
+          ease: "power1.out",
+          stagger: 0.05,
+        },
+      )
+      .fromTo(
+        ".button",
+        {
+          scale: 1.5,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1.25,
+          ease: "back.out",
+        },
+        "<",
+      );
   });
 
   return (
