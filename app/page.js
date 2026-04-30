@@ -33,20 +33,11 @@ function Page() {
           stagger: 0.05,
         },
       )
-      .fromTo(
-        ".button",
-        {
-          scale: 1.5,
-          opacity: 0,
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 1.25,
-          ease: "back.out",
-        },
-        "<",
-      );
+      .from(".button", {
+        duration: 1.2,
+        clipPath: "inset(0% 100% 0% 0%)",
+        ease: "power1.inOut",
+      });
   });
 
   return (
@@ -66,7 +57,7 @@ function Page() {
         </h1>
         <Link
           href="/cabins"
-          className="button opacity-0 bg-accent-500 px-4 md:px-8 py-5 md:py-6 text-primary-800 text-sm md:text-lg font-semibold hover:bg-accent-600 transition-all inline-block"
+          className="button bg-accent-500 px-4 md:px-8 py-5 md:py-6 text-primary-800 text-sm md:text-lg font-semibold hover:bg-accent-600 transition-colors inline-block"
         >
           Explore luxury cabins
         </Link>

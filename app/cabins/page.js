@@ -3,6 +3,7 @@ import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
 import Filter from "../_components/Filter";
 import ReservationReminder from "../_components/ReservationReminder";
+import { useGSAP } from "@gsap/react";
 
 // only applies on statically rendered pages
 // export const revalidate = 3600;
@@ -18,7 +19,7 @@ export default async function Page({ searchParams }) {
 
   return (
     <div>
-      <h1 className="text-4xl mb-5 text-accent-400 font-medium">
+      <h1 className="title text-4xl mb-5 text-accent-400 font-medium">
         Our Luxury Cabins
       </h1>
       <p className="text-primary-200 text-justify text-lg mb-10">
