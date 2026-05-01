@@ -31,7 +31,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col relative overflow-x-hidden`}
+        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col relative overflow-hidden`}
       >
         <AuthProvider session={session}>
           <Header />

@@ -97,7 +97,7 @@ function Page() {
         ref={bgRef}
         src={bg}
         fill
-        className="object-cover object-top will-change-transform top-[-25%] scale-120"
+        className="object-cover object-top will-change-transform scale-120"
         placeholder="blur"
         quality={[75, 90]}
         alt="Mountains and forests with two cabins"
