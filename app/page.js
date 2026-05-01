@@ -49,6 +49,7 @@ function Page() {
 
   useEffect(() => {
     const bg = bgRef.current;
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
     const STRENGTH = 30;
 
     const setX = gsap.quickSetter(bg, "x", "px");
@@ -81,7 +82,7 @@ function Page() {
 
     gsap.ticker.add(tick);
 
-    window.addEventListener("mousemove", onMouse);
+    if (!isTouchDevice) window.addEventListener("mousemove", onMouse, true);
     window.addEventListener("deviceorientation", onGyro);
 
     return () => {
