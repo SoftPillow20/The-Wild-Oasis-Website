@@ -49,7 +49,7 @@ function Page() {
 
   useEffect(() => {
     const bg = bgRef.current;
-    const STRENGTH = 20;
+    const STRENGTH = 30;
 
     const setX = gsap.quickSetter(bg, "x", "px");
     const setY = gsap.quickSetter(bg, "y", "px");
