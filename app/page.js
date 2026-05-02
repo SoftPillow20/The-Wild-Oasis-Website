@@ -69,8 +69,8 @@ function Page() {
     };
 
     const onGyro = (e) => {
-      targetX = -Math.max(-1, Math.min(1, e.gamma / 25) * STRENGTH);
-      targetY = -Math.max(-1, Math.min(1, e.beta / 25) * STRENGTH);
+      targetX = Math.max(-1, Math.min(1, e.gamma / 45) * STRENGTH);
+      targetY = Math.max(-1, Math.min(1, e.beta / 45) * STRENGTH);
     };
 
     const tick = () => {
