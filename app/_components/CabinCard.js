@@ -6,7 +6,7 @@ function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
-    <div className="flex flex-col md:flex-row border-primary-800 border">
+    <>
       <div className="relative flex-1 aspect-square">
         <Image
           src={image}
@@ -57,7 +57,7 @@ function CabinCard({ cabin }) {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

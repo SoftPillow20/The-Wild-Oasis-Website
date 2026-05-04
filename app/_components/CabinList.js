@@ -1,7 +1,7 @@
 import { connection as noStore } from "next/server";
 
-import CabinCard from "./CabinCard";
 import { getCabins } from "../_lib/data-service";
+import CabinCards from "./CabinCards";
 
 async function CabinList({ filter }) {
   await noStore(); // opt-out data cache
@@ -26,9 +26,9 @@ async function CabinList({ filter }) {
 
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14">
-      {displayedCabins.map((cabin) => (
-        <CabinCard cabin={cabin} key={cabin.id} />
-      ))}
+      {displayedCabins.length === 0 ? null : (
+        <CabinCards cabinData={displayedCabins} />
+      )}
     </div>
   );
 }

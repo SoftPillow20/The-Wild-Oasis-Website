@@ -19,7 +19,7 @@ export default async function Page({ searchParams }) {
 
   return (
     <div>
-      <h1 className="title text-4xl mb-5  font-medium text-gradient">
+      <h1 className="title text-4xl mb-5  font-medium text-accent-400">
         Our Luxury Cabins
       </h1>
       <p className="text-primary-200 text-justify text-lg mb-10">
