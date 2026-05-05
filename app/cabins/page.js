@@ -3,7 +3,6 @@ import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
 import Filter from "../_components/Filter";
 import ReservationReminder from "../_components/ReservationReminder";
-import { useGSAP } from "@gsap/react";
 
 // only applies on statically rendered pages
 // export const revalidate = 3600;

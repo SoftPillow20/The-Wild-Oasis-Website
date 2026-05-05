@@ -1,10 +1,23 @@
+"use client";
+
 import TextExpander from "@/app/_components/TextExpander";
+import { useGSAP } from "@gsap/react";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
+import gsap from "gsap";
 import Image from "next/image";
 
 function Cabin({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image, description } =
     cabin;
+
+  useGSAP(() => {
+    gsap.from(".title", {
+      opacity: 0,
+      translateX: 80,
+      ease: "power1.inOut",
+      duration: 0.5,
+    });
+  }, []);
 
   return (
     <div className="grid grid-rows-[3fr_4fr] md:grid-rows-1 md:grid-cols-[3fr_4fr] gap-0 md:gap-20 border border-primary-800 py-3 px-10 mb-24">
@@ -20,7 +33,7 @@ function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-[52px] sm:text-7xl mb-5 -translate-y-63.5 md:translate-y-0 md:-translate-x-63.5 bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-accent-100 font-black text-[52px] sm:text-7xl mb-5 -translate-y-63.5 md:translate-y-0 md:-translate-x-63.5 bg-primary-950 p-6 pb-1 w-[150%] title">
           Cabin {name}
         </h3>
 
