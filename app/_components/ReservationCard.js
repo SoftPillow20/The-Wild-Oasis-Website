@@ -1,3 +1,5 @@
+"use client";
+
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import { format, formatDistance, isPast, isToday, parseISO } from "date-fns";
 import DeleteReservation from "./DeleteReservation";
@@ -24,7 +26,7 @@ function ReservationCard({ booking, onDelete }) {
   } = booking;
 
   return (
-    <div className="flex border flex-col lg:flex-row border-primary-800">
+    <>
       <div className="relative h-32 aspect-square">
         <Image
           src={image}
@@ -85,7 +87,7 @@ function ReservationCard({ booking, onDelete }) {
           </>
         ) : null}
       </div>
-    </div>
+    </>
   );
 }
 
